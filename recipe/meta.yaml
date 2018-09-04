@@ -8,7 +8,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: ggvis_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/ggvis_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggvis/ggvis_{{ version }}.tar.gz
@@ -27,6 +26,7 @@ build:
 # Suggests: MASS, mgcv, lubridate, testthat (>= 0.8.1), knitr (>= 1.6), rmarkdown
 requirements:
   build:
+    - {{posix}}zip               # [win]
 
   host:
     - r-base
