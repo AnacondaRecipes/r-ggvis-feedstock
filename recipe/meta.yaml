@@ -1,4 +1,4 @@
-{% set version = '0.4.3' %}
+{% set version = '0.4.4' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,12 +11,13 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ggvis_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggvis/ggvis_{{ version }}.tar.gz
-  sha256: 34d517783016aaa1c4bef8972f4c06df5cd9ca0568035b647e60a8369043ecdc
+  sha256: 1332ea122b768688c8a407a483be80febc4576de0ec8929077738421b27cafaf
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
+  noarch: generic
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -79,7 +80,7 @@ extra:
 # Package: ggvis
 # Title: Interactive Grammar of Graphics
 # Description: An implementation of an interactive grammar of graphics, taking the best parts of 'ggplot2', combining them with the reactive framework of 'shiny' and drawing web graphics using 'vega'.
-# Version: 0.4.3
+# Version: 0.4.4
 # Authors@R: c( person("Winston", "Chang", role = c("aut", "cre"), email = "winston@rstudio.com"), person("Hadley", "Wickham", role = "aut", email = "hadley@rstudio.com"), person(family = "RStudio", role = "cph"), person(family = "jQuery Foundation", role = "cph", comment = "jQuery library and jQuery UI library"), person(family = "jQuery contributors", role = c("ctb", "cph"), comment = "jQuery library; authors listed in inst/www/lib/jquery/AUTHORS.txt"), person(family = "jQuery UI contributors", role = c("ctb", "cph"), comment = "jQuery UI library; authors listed in inst/www/lib/jquery-ui/AUTHORS.txt"), person("Mike", "Bostock", role = c("ctb", "cph"), comment = "D3 library"), person(family = "D3 contributors", role = "ctb", comment = "D3 library; authors listed at https://github.com/mbostock/d3/graphs/contributors"), person(family = "Trifacta Inc.", role = "cph", comment = "Vega library"), person(family = "Vega contributors", role = "ctb", comment = "Vega library; authors listed at https://github.com/trifacta/vega/graphs/contributors"), person("Sebastian", "Decima", role = c("ctb", "cph"), comment = "javascript-detect-element-resize library") )
 # URL: http://ggvis.rstudio.com/
 # Depends: R (>= 3.0)
@@ -88,13 +89,13 @@ extra:
 # Encoding: UTF-8
 # License: GPL-2 | file LICENSE
 # LazyData: true
-# RoxygenNote: 5.0.1
+# RoxygenNote: 6.1.0.9000
 # NeedsCompilation: no
-# Packaged: 2016-07-22 16:15:28 UTC; winston
+# Packaged: 2018-09-28 21:20:56 UTC; winston
 # Author: Winston Chang [aut, cre], Hadley Wickham [aut], RStudio [cph], jQuery Foundation [cph] (jQuery library and jQuery UI library), jQuery contributors [ctb, cph] (jQuery library; authors listed in inst/www/lib/jquery/AUTHORS.txt), jQuery UI contributors [ctb, cph] (jQuery UI library; authors listed in inst/www/lib/jquery-ui/AUTHORS.txt), Mike Bostock [ctb, cph] (D3 library), D3 contributors [ctb] (D3 library; authors listed at https://github.com/mbostock/d3/graphs/contributors), Trifacta Inc. [cph] (Vega library), Vega contributors [ctb] (Vega library; authors listed at https://github.com/trifacta/vega/graphs/contributors), Sebastian Decima [ctb, cph] (javascript-detect-element-resize library)
 # Maintainer: Winston Chang <winston@rstudio.com>
 # Repository: CRAN
-# Date/Publication: 2016-07-22 18:45:42
+# Date/Publication: 2018-09-28 21:50:03 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
